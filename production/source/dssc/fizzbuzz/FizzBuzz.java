@@ -41,6 +41,7 @@ public class FizzBuzz {
         HashMap<Integer, String> rules = new HashMap<>();
         rules.put(3, "Fizz");
         rules.put(5, "Buzz");
+        rules.put(7, "Bang");
         return rules;
     }
 }
