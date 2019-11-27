@@ -1,7 +1,5 @@
 package dssc.fizzbuzz;
 
-import java.util.HashMap;
-
 public class FizzBuzz {
 
     private static ConversionRules rules = new ConversionRules();
