@@ -27,4 +27,24 @@ public class FizzBuzzTest {
     void fifteenIsFizzBuzz() {
         check("FizzBuzz", 15);
     }
+
+    @Test
+    void sevenIsBang() {
+        check("Bang", 7);
+    }
+
+    @Test
+    void twentyOneIsFizzBang() {
+        check("FizzBang", 21);
+    }
+
+    @Test
+    void thirtyFiveIsBuzzBang() {
+        check("BuzzBang", 35);
+    }
+
+    @Test
+    void oneHundredFiveIsFizzBuzzBang() {
+        check("FizzBuzzBang", 105);
+    }
 }
