@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class FizzBuzz {
 
+    private static ConversionRules rules = new ConversionRules();
+
     public static String fizzBuzz(int number) {
         if (isMultipleOfAnyKey(number))
             return writeFizzBuzzString(number);
@@ -13,7 +15,7 @@ public class FizzBuzz {
 
     private static boolean isMultipleOfAnyKey(int number) {
         boolean isMultiple = false;
-        for (int key : fizzBuzzRules.keySet()) {
+        for (int key : rules.getAllKeys()) {
             isMultiple = isMultiple || isMultipleOfKey(number, key);
         }
         return isMultiple;
@@ -24,24 +26,14 @@ public class FizzBuzz {
     }
 
     private static String writeFizzBuzzString(int number) {
-        StringBuilder fbstring = new StringBuilder();
-        for (int key : fizzBuzzRules.keySet())
+        StringBuilder fizzBuzzString = new StringBuilder();
+        for (int key : rules.getAllKeys())
             if (isMultipleOfKey(number, key))
-                updateStringValue(fbstring, key);
-        return fbstring.toString();
+                updateStringValue(fizzBuzzString, key);
+        return fizzBuzzString.toString();
     }
 
-    private static void updateStringValue(StringBuilder fbstring, int key) {
-        fbstring.append(fizzBuzzRules.get(key));
-    }
-
-    private static HashMap<Integer, String> fizzBuzzRules = putRules();
-
-    private static HashMap<Integer, String> putRules() {
-        HashMap<Integer, String> rules = new HashMap<>();
-        rules.put(3, "Fizz");
-        rules.put(5, "Buzz");
-        rules.put(7, "Bang");
-        return rules;
+    private static void updateStringValue(StringBuilder fizzBuzzString, int key) {
+        fizzBuzzString.append(rules.getValue(key));
     }
 }
