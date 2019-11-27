@@ -3,7 +3,7 @@ package dssc.fizzbuzz;
 import java.util.HashMap;
 import java.util.Set;
 
-public class ConversionRules {
+class ConversionRules {
 
     private HashMap<Integer, String> rules;
 
