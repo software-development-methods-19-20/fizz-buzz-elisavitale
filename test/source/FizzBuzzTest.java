@@ -2,9 +2,9 @@ import dssc.fizzbuzz.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class FizzBuzzTest {
+class FizzBuzzTest {
 
-    public void check(String expected, int number) {
+    void check(String expected, int number) {
         Assertions.assertEquals(expected, FizzBuzz.fizzBuzz(number));
     }
 
